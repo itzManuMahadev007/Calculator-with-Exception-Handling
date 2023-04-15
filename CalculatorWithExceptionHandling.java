@@ -201,7 +201,7 @@ public class CalculatorWithExceptionHandling {
 			while (flag2) {
 
 				try {
-					System.out.println("Enter Second Number");
+					System.out.println("Enter Second Number (Non-Zero)");
 					n2 = sc.nextInt();
 					flag2 = false;
 					break;
