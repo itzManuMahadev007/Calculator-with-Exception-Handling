@@ -13,12 +13,14 @@ public class CalculatorWithExceptionHandling {
 		System.out.println(
 				"Select your option: \n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division \n 5. Stop the Program");
 
-		int option = sc.nextInt();
+		int option = 0;
 		boolean flag = true;
 
 		while (flag) {
 
 			try {
+				option = sc.nextInt();
+
 				switch (option) {
 				case 1:
 					add();
@@ -42,10 +44,15 @@ public class CalculatorWithExceptionHandling {
 					break;
 				default:
 					sc.nextLine();
+					start();
 					flag = true;
 					break;
 				}
 			} catch (Exception e) {
+				flag = true;
+				sc.nextLine();
+				System.out.println(e);
+				start();
 
 			}
 
