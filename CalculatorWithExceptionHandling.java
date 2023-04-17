@@ -194,6 +194,10 @@ public class CalculatorWithExceptionHandling {
 			try {
 				System.out.println("Enter Second Number");
 				n2 = sc.nextInt();
+				if (n2 == 0) {
+					System.out.println("Second number cannot be zero");
+					continue;
+				}
 				flag2 = false;
 				break;
 			} catch (Exception e) {
@@ -203,22 +207,6 @@ public class CalculatorWithExceptionHandling {
 			}
 		}
 
-		if (n2 == 0) {
-			flag2 = true;
-			while (flag2) {
-
-				try {
-					System.out.println("Enter Second Number (Non-Zero)");
-					n2 = sc.nextInt();
-					flag2 = false;
-					break;
-				} catch (Exception e) {
-					System.out.println("Invalid Number");
-					sc.nextLine();
-					flag2 = true;
-				}
-			}
-		}
 		System.out.println(n1 / n2);
 		start();
 	}
